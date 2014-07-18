@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded());
 app.use(flash());
 app.use(cookieParser());
 app.use(expsession({
+    resvae:true,
     secret:settings.cookieSecret,
     store:new MongoStore({
         db:settings.db
