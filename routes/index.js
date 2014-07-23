@@ -5,6 +5,7 @@ var flash = require("connect-flash");
 var crypto = require('crypto');
 var User = require('../models/user');
 var Post = require('../models/post');
+var vcode = require('../utils/vcode');
 /* GET home page. */
 //router.get('/', function(req, res) {
  // res.render('index', { title: 'Express' });
@@ -130,7 +131,9 @@ module.exports = function(app){
 
     });
 
-
+    app.get('/vcode',function(req,res){
+        vcode(req,res);
+    });
 
 
 };

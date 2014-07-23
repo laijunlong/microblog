@@ -28,6 +28,7 @@
     "ejs": "~0.8.5",
     "mongodb": ">= 0.9.9",
     "connect-mongo":">= 0.1.7",
-    "connect-flash":"*"
+    "connect-flash":"*",
+    "canvas":"*"
   }
 }
