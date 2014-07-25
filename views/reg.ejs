@@ -1,10 +1,15 @@
+<script type="text/javascript">
+    function vcodef(){
+        $("#reg_vcode").click();
+    }
+</script>
 <form class="form-horizontal" method="post">
 <fieldset>
     <legend>用户注册</legend>
     <div class="control-group">
         <label class="control-label" for="username">用户名</label>
         <div class="controls">
-            <input type="text" class="input-xlarge" id="username" name="username">
+            <input type="text" class="input-large" id="username" name="username">
             <p class="help-block">你的账户名称，用于登录和显示</p>
         </div>
     </div>
@@ -24,14 +29,14 @@
     <div class="control-group">
         <label class="control-label" for="email">邮箱</label>
         <div class="controls">
-            <input type="email" class="input-xlarge" id="email" name="email">
+            <input type="email" class="input-large" id="email" name="email">
             <span class="help-inline">请使用正确的邮箱格式</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="gender">性别</label>
         <div class="controls">
-            <select id="gender">
+            <select id="gender" class="input-small">
                 <option>Male</option>
                 <option selected>Female</option>
             </select>
@@ -40,15 +45,12 @@
     <div class="control-group">
         <label class="control-label" for="vcode">验证码</label>
         <div class="controls">
-            <input type="text" class="input-xlarge" id="vcode" name="vcode">
-            <img src="/vcode">
+            <input type="text" class="input-small" id="vcode" name="vcode">
+            <img id="reg_vcode" name="reg_vcode" src="/vcode" onclick="this.src=document.location.protocol+'/vcode?ts='+new Date().getTime()">看不清楚?<a href="javascript:void(0)" onclick="setTimeout(vcodef,50)">换一张</a>
         </div>
     </div>
     <div class="form-actions">
         <button type="submit" class="btn btn-primary">注册</button>
     </div>
 </fieldset>
-
-
-
 </form>
